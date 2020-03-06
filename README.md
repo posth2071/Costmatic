@@ -3,6 +3,8 @@
 기능 구현
  1) 앱실행시 첫 POST 요청
       - BODY 설정값 (start-0 / count-10 / keyword-"" / sub_category_ids-0) 
+      - REST API. OkHttp Library 사용
+      - 이미지 다운로드 AsyncTask 사용
 
  2) 동일조건 추가검색 버튼
       - RecyclerView 스크롤 중 마지막 Item일 경우 추가검색 버튼 Visible
