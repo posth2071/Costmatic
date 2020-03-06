@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bt_start"
+        android:layout_marginRight="20dp"
+        android:hint="브랜드 / 제품명 입력"
+        android:textSize="13sp"
+        android:singleLine="true"
+        app:layout_constraintBaseline_toBaselineOf="@id/bt_start"
+        />
+    <Button
+        android:id="@+id/bt_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="검색"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <TextView
+        android:id="@+id/title_count"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/spinner_count"
+        android:text="검색 개수"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/spinner_count"
+        />
+    <Spinner
+        android:id="@+id/spinner_count"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:entries="@array/count_array"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/bt_start"
+        app:layout_constraintLeft_toRightOf="@+id/title_count"
+        />
+
+    <TextView
+        android:id="@+id/title_category"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        app:layout_constraintRight_toLeftOf="@id/spinner_category"
+        app:layout_constraintTop_toTopOf="@id/spinner_count"
+        android:layout_marginRight="10dp"
+        android:text="카테고리"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/spinner_category"
+        />
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:entries="@array/category_array"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/bt_start"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/Line"
+        app:layout_constraintBottom_toTopOf="@id/recycle_items"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_category"
+        app:layout_constraintVertical_bias="0.501" />
+
+    <Button
+        android:id="@+id/bt_plus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

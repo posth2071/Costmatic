@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="count_array">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+
+    <string-array name="category_array">
+        <item>-- 전체 --</item>
+        <item>스킨 / 토너</item>
+        <item>클렌징 크림</item>
+        <item>선블록</item>
+        <item>마스크 시트</item>
+    </string-array>
+</resources>
